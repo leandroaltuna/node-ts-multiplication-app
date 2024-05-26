@@ -29,9 +29,10 @@ export const yarg = yargs( hideBin( process.argv ) )
     .options('d', {
         alias: 'destination',
         type: 'string',
-        default: 'output',
+        default: 'outputs',
         describe: 'File destination'
     })
+    // .check( (argv, options) => {
     .check( (argv, options) => {
 
         if ( argv.b < 1 ) {
