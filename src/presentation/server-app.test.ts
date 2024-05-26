@@ -75,6 +75,7 @@ describe('Server App', () => {
             "fileName": options.fileName,
         });
         expect( logMock ).toHaveBeenCalledWith('File created!');
+        expect( logErrorMock ).not.toHaveBeenCalledWith();
 
     });
 
